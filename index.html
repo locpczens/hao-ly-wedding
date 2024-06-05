@@ -16,6 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:description" content="Thanh Hảo vs Khánh Ly Wedding Invitation">
   <meta property="og:image" content="./publics/cover-1.webp">
+  <meta property="og:image:url" content="./publics/cover-1.webp">
   <meta property="og:image:secure_url" content="./publics/cover-1.webp">
 
   <meta name="twitter:site" content="@thesimple.vn">
@@ -3632,8 +3633,7 @@
         <audio id="player" autoplay loop>
           <source src="./publics/audio.mp3">
         </audio>
-        <div
-          class="volumne"
+        <div class="volumne"
           style="position: absolute; right: 30px; bottom: 20px; background-color: #9a9696; width: 40px; height: 40px; border-radius: 20px; display: flex; justify-content: center; align-items: center;">
           <div style="margin-top: 10px;">
             <span id="playerVolumeOff"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="#fff"
@@ -3795,11 +3795,11 @@
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 15000);
     }
+
+    setTimeout(showSlides(slideIndex += 1), 15000);
+
 
     let slideIndex1 = 1;
     showSlides1(slideIndex1);
@@ -3820,11 +3820,10 @@
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      slideIndex1++;
-      if (slideIndex1 > slides.length) { slideIndex1 = 1 }
       slides[slideIndex1 - 1].style.display = "block";
-      setTimeout(showSlides, 10000);
     }
+
+    setTimeout(showSlides(slideIndex1 += n), 10000);
 
     window.document.getElementById('playerVolumeOff').addEventListener('click', function () {
       const playerVolumeOn = document.getElementById("playerVolumeOn");
