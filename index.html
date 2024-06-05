@@ -101,6 +101,47 @@
       animation: mymove1 3s infinite;
     }
 
+    .fa-music:before {}
+
+    @media only screen and (max-width: 767px) {
+      .block-1 {
+        display: none;
+      }
+
+      .block-2 {
+        width: 100% !important;
+      }
+
+      .image-banner-1 {
+        width: 54px !important;
+        height: 90px !important;
+        margin-top: 20px;
+      }
+
+      .image-banner-2 {
+        width: 54px !important;
+        height: 90px !important;
+        margin-top: 20px !important;
+      }
+
+      .image-cover {
+        margin-top: 0px;
+        width: 200px !important;
+        height: 300px !important;
+      }
+
+      .box-ab-theme-2 {
+        margin-top: 80px !important;
+      }
+      .btn-musicf {
+        padding: 0px !important;
+      }
+      .after-slash:after {
+        top: 28.2% !important;
+        left: 50% !important;
+      }
+    }
+
     /* Chrome, Safari, Opera */
     @keyframes mymove {
       from {
@@ -135,7 +176,7 @@
 
 <body>
   <div style="display: flex; height: 100vh; overflow: hidden;">
-    <div style="position:relative; width: 70%; height: 100vh;">
+    <div style="position:relative; width: 70%; height: 100vh;" class="block-1">
       <div class="slide-box" style="width: 100%; height: 100%; margin-top: 0px;">
 
         <div class="autoplay">
@@ -150,7 +191,7 @@
           </div>
         </div>
       </div>
-      <div style="position: absolute; bottom: 60px; left: 80px; z-index: 100;">
+      <div style="position: absolute; bottom: 40px; left: 80px; z-index: 100;">
         <div class="custom-cover"
           style="height: 100px; display: flex; justify-content: center; align-items: center; gap: 24px; font-size: 80px; font-weight: 500; color: white; text-shadow: 2px 2px #231f20;">
           <p>Thanh Hảo</p>
@@ -158,22 +199,21 @@
           <p>Khánh Ly</p>
         </div>
         <div
-          style="display: flex; justify-content: center; font-size: 24px; font-style: italic; color: white; text-shadow: 1px 1px #231f20"
+          style="margin-top:-20px; display: flex; justify-content: center; font-size: 24px; font-style: italic; color: white; text-shadow: 1px 1px #231f20"
           class="custom-name og-date">29.06.24</div>
       </div>
     </div>
-    <div style="width: 30%; margin-left: auto; margin-right: auto; overflow: auto;" class="main-page">
+    <div style="width: 30%; margin-left: auto; margin-right: auto; overflow: auto;" class="main-page block-2">
       <div id="main-page" text_alert_rsvp="Xin cảm ơn phản hồi của bạn!"
         send_text_alert_rsvp="Gửi lời nhắn hoặc lời chúc" btn_send_mb="Gửi đi">
         <div class="box-tsimple-online">
           <div class="cover">
-            <div
-              style="margin-bottom: -80px; font-size: 200px; line-height: 150px; font-weight: 600; text-align: right; color: #333">
-              <img src="./publics/H.svg" style="width: 108px; height: 180px;" class="animation" />
+            <div style="margin-bottom: -80px; font-weight: 600; text-align: right; color: #333">
+              <img src="./publics/H.svg" style="width: 108px; height: 180px;" class="animation image-banner-1" />
             </div>
             <div style="display: flex; justify-content: center; margin-top: 100px;">
               <div>
-                <img src="./publics/banner.JPG"
+                <img src="./publics/banner.JPG" class="image-cover"
                   style="width: 300px; height: 450px; object-fit: cover; border-top-left-radius: 110px; border-top-right-radius: 110px;" />
               </div>
             </div>
@@ -185,9 +225,9 @@
             </div>
             <div style="display: flex; justify-content: center; margin-top: -20px; font-size: 12px; font-style: italic;"
               class="custom-name og-date">29.06.24</div>
-            <div
-              style="margin-top: 0px; line-height: 200px; font-size: 200px; font-weight: 600; color: #333">
-              <img src="./publics/L.svg" style="width: 108px; height: 180px;" class="animation-1" />
+            <div style="margin-top: 0px; color: #333">
+              <img src="./publics/L.svg" style="width: 108px; height: 180px; margin-top: 30px;"
+                class="animation-1 image-banner-2" />
             </div>
           </div>
 
@@ -3294,9 +3334,8 @@
 
           </div>
 
-          <div>
+          <div style="margin-top: 40px; margin-bottom: 20px;">
             <img id="image-1" src="./publics/sg-1.png">
-
           </div>
 
 
@@ -3327,7 +3366,9 @@
 
           <div class=" mt-80" style="position: relative;">
             <img id="image-2" src="./publics/sg-2.png">
-            <p id="invite-name" style="position: absolute; top: 12%; left: 15%; z-index: 10; font-size: 28px; font-family: 'Times New Roman', Times, serif;">Bạn</p>
+            <p id="invite-name"
+              style="position: absolute; top: 12%; left: 15%; z-index: 10; font-size: 28px; font-family: 'Times New Roman', Times, serif;">
+              Bạn</p>
           </div>
 
 
@@ -3381,202 +3422,6 @@
             </div>
           </div>
 
-          <div class="box-phanhoi text-center mt-80 mb-40">
-            <div class="mb-20">
-              <img
-                src="https://ucarecdn.com/0b2d7774-ca5c-4d62-9023-6f7dde8ee31d/-/format/auto/-/preview/3000x3000/-/quality/lighter/w2%20_1_.png">
-            </div>
-            <h3 class="text-center">Thông tin phản hồi</h3>
-            <div class="text-center px-20">
-              <span class="">Để thuận tiện cho việc sắp xếp chỗ ngồi, vui lòng phản hồi giúp vợ chồng mình nhé!</span>
-            </div>
-
-            <div class="px-20">
-              <div class="box-invite mt-40">
-                <div class="box-icon-ts">
-                  <div class="wrapper-ts-boxp">
-                    <input type="radio" name="selectboxp" id="option-1boxp" checked>
-                    <input type="radio" name="selectboxp" id="option-2boxp">
-                    <input type="radio" name="selectboxp" id="option-3boxp">
-                    <label for="option-1boxp" class="optionboxp option-1boxp ">
-                      <div class="dot">
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 149.41 149.42">
-                          <defs>
-                            <style>
-                              .cls-1 {
-                                fill: #545554;
-                              }
-                            </style>
-                          </defs>
-                          <path class="cls-1"
-                            d="M149.38,57.22c-.23.29-.45.6-.7.87a2.91,2.91,0,0,1-5.11-1.57,11.82,11.82,0,0,1,0-1.46q0-18.3,0-36.61A12.08,12.08,0,0,0,138.83,8.3a12.69,12.69,0,0,0-8.05-2.43H18.49a12.47,12.47,0,0,0-8,2.5,12,12,0,0,0-4.62,10q0,14.65,0,29.32v83.13c0,5.13,2,9.1,6.7,11.5a12.36,12.36,0,0,0,5.64,1.21q56.51,0,113,0c5.91,0,10.3-3.3,11.87-8.82a14.39,14.39,0,0,0,.47-4q0-22.68,0-45.36a3,3,0,0,1,2.16-3.21c1.31-.38,2.45.16,3.39,1.59a4,4,0,0,0,.28.32v50.47c-.91,7.34-5.24,11.86-11.93,14.42a12.22,12.22,0,0,1-4.45.59q-58.32,0-116.64,0c-7.78,0-14.59-6.38-16.19-13.19a15,15,0,0,1-.3-3.48c0-38.78.05-77.57,0-116.35C-.2,7.92,7.55.94,13.32.25A4.52,4.52,0,0,0,15.18,0h119c6.56.66,10.95,4.34,13.88,10a14.16,14.16,0,0,1,1.29,5.14Z" />
-                          <path class="cls-1"
-                            d="M149.38,71.51c-1.27,1.93-2.54,2.53-4,1.85a2.8,2.8,0,0,1-1.79-2.88,2.77,2.77,0,0,1,2.16-2.61A2.71,2.71,0,0,1,148.79,69c.2.26.39.54.59.8Z" />
-                          <path class="cls-1"
-                            d="M73.49,109.55a35.79,35.79,0,0,1-21.18-7.71c-1-.78-1.93-1.63-2.85-2.49a3,3,0,0,1-.4-4.38,2.86,2.86,0,0,1,4.29,0,30.79,30.79,0,0,0,8.84,6c11.59,4.8,22.32,3.34,32.13-4.54.53-.42,1-.91,1.53-1.35,1.65-1.41,3.31-1.45,4.51-.1s.93,3-.58,4.48a39.44,39.44,0,0,1-7.71,5.68C86.81,108.17,79,110,73.49,109.55Z" />
-                          <path class="cls-1"
-                            d="M37.06,62.55a12.25,12.25,0,0,1,24.46-.06c.13,2-.9,3.37-2.63,3.54s-2.9-.86-3.19-2.8c-.59-3.87-2.57-6.08-5.68-6.34a6.31,6.31,0,0,0-7.13,6C42.73,64.67,42,65.7,40.56,66,38.42,66.4,37,65,37.06,62.55Z" />
-                          <path class="cls-1"
-                            d="M112.33,62.63c0,2-1,3.34-2.72,3.43S106.68,65,106.49,63a6.3,6.3,0,0,0-6-6.09c-3.48-.15-6,2-6.61,5.59,0,.1,0,.19-.06.29-.41,2.51-1.55,3.57-3.5,3.25S87.6,64.13,88,61.69c1-6.28,5.63-10.67,12-10.78A12.14,12.14,0,0,1,112.33,62.63Z" />
-                        </svg>
-
-                        <div class="text-left">
-                          <span>Yeah! <br></span>
-                          <span>Sẵn sàng</span>
-                        </div>
-
-
-                      </div>
-                      <!-- <span>Tham Dự</span> -->
-                    </label>
-                    <!-- <label for="option-2boxp" class="optionboxp option-2boxp ">
-                                  <div class="dot">
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                         viewBox="0 0 149.41 149.42" style="enable-background:new 0 0 149.41 149.42;" xml:space="preserve">
-                                      <style type="text/css">
-                                        .st0{fill:#545554;}
-                                        .st1{fill:#FFFFFF;}
-                                      </style>
-                                      <g>
-                                        <g>
-                                          <path class="st0" d="M149.54,57.22c-0.23,0.29-0.44,0.6-0.69,0.88c-0.86,0.93-1.9,1.31-3.14,0.88c-1.17-0.4-1.82-1.24-1.98-2.46
-                                            c-0.06-0.48-0.03-0.97-0.03-1.46c0-12.2,0-24.4,0-36.61c0-4.1-1.37-7.58-4.71-10.15c-2.38-1.83-5.12-2.43-8.05-2.43
-                                            c-24.26,0-48.51,0-72.77,0c-13.17,0-26.35-0.01-39.52,0c-2.92,0-5.66,0.64-8.02,2.5c-3.27,2.56-4.62,6-4.62,10.05
-                                            c-0.01,9.77,0,19.54,0,29.31c0,27.71,0,55.42,0,83.13c0,5.13,2.03,9.1,6.7,11.5c1.76,0.9,3.69,1.21,5.63,1.21
-                                            c37.67,0.01,75.35,0.02,113.02,0c5.92,0,10.3-3.3,11.88-8.82c0.37-1.31,0.47-2.67,0.47-4.03c0-15.12,0-30.24,0-45.36
-                                            c0-1.72,0.76-2.82,2.17-3.22c1.31-0.38,2.44,0.16,3.39,1.59c0.08,0.12,0.18,0.21,0.27,0.32c0,16.82,0,33.65,0,50.47
-                                            c-0.91,7.34-5.24,11.85-11.93,14.42c-1.44,0.55-2.95,0.59-4.45,0.59c-38.88,0.02-77.76-0.02-116.64,0.04
-                                            c-7.78,0.01-14.59-6.37-16.19-13.19c-0.27-1.13-0.3-2.31-0.3-3.47c0-38.79,0.05-77.57-0.04-116.36
-                                            C-0.04,7.92,7.71,0.94,13.48,0.25c0.62-0.07,1.27,0.11,1.85-0.22c39.68,0,79.35,0,119.03,0c6.57,0.66,10.95,4.34,13.89,10.03
-                                            c0.83,1.61,1.11,3.36,1.28,5.14C149.54,29.21,149.54,43.21,149.54,57.22z"/>
-                                          <path class="st0" d="M149.54,71.51c-1.27,1.93-2.54,2.53-4.02,1.85c-1.21-0.56-1.89-1.53-1.79-2.88c0.1-1.34,0.87-2.24,2.16-2.61
-                                            c1.26-0.36,2.27,0.1,3.06,1.1c0.2,0.26,0.39,0.53,0.59,0.8C149.54,70.34,149.54,70.93,149.54,71.51z"/>
-                                        </g>
-                                        <g>
-                                          <path class="st0" d="M120.11,48.27c-0.04,0-0.08,0-0.12,0l0,0c-7.74-0.06-13.94-5.94-14.43-13.67c-0.16-2.5,0.76-4.65,1.58-6.24
-                                            c2.79-5.43,6.67-9.87,10.74-14.32c0.27-0.31,0.96-1.11,2.15-1.12c0.32-0.05,1.36,0.16,2.11,1c4.56,5.04,8.57,9.69,11.36,15.48
-                                            c2.63,5.46-0.08,13.28-5.8,16.71C125.25,47.58,122.83,48.27,120.11,48.27z M120.02,43.7c1.8-0.08,3.56-0.45,5.33-1.51
-                                            c3.69-2.21,5.65-7.47,4.04-10.81c-2.27-4.7-5.55-8.72-9.33-12.94c-3.48,3.86-6.61,7.65-8.85,12.01c-0.84,1.64-1.16,2.76-1.09,3.87
-                                            C110.46,39.62,114.71,43.66,120.02,43.7L120.02,43.7z M118.74,16.98C118.75,16.98,118.75,16.98,118.74,16.98
-                                            C118.75,16.98,118.75,16.98,118.74,16.98z"/>
-                                        </g>
-                                        <path class="st0" d="M77.37,107.61c-5.02,0-10.03-0.02-15.05,0.02c-0.89,0.01-1.23-0.18-1.19-1.15c0.08-1.89,0.06-3.79,0.01-5.68
-                                          c-0.02-0.81,0.12-1.15,1.06-1.14c10.13,0.04,20.25,0.03,30.38,0.01c0.79,0,1.06,0.2,1.04,1.02c-0.06,1.99-0.06,3.98,0,5.96
-                                          c0.03,0.86-0.32,0.98-1.06,0.98C87.5,107.6,82.43,107.61,77.37,107.61z"/>
-                                        <path class="st0" d="M53.16,70.77c-4.27-0.03-7.84-3.63-7.79-7.88c0.04-4.36,3.61-7.84,8-7.81c4.29,0.03,7.79,3.57,7.77,7.88
-                                          C61.13,67.29,57.55,70.79,53.16,70.77z"/>
-                                        <path class="st0" d="M101.79,70.76c-4.42-0.08-7.91-3.67-7.78-8c0.13-4.43,3.63-7.76,8.08-7.69c4.32,0.06,7.74,3.7,7.64,8.13
-                                          C109.62,67.41,106.02,70.84,101.79,70.76z"/>
-                                      </g>
-                                      </svg>
-                  
-                                  </div>
-                                  <span>Có Thể</span>
-                                </label> -->
-                    <label for="option-3boxp" class="optionboxp option-3boxp ">
-                      <div class="dot">
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 149.41 149.42">
-                          <defs>
-                            <style>
-                              .cls-1 {
-                                fill: #545554;
-                              }
-                            </style>
-                          </defs>
-                          <path class="cls-1"
-                            d="M149.37,84.06v50.47c-.91,7.34-5.24,11.86-11.92,14.42a12.28,12.28,0,0,1-4.45.59q-58.32,0-116.64,0c-7.78,0-14.59-6.38-16.2-13.19a15.54,15.54,0,0,1-.3-3.48c0-38.78.06-77.57,0-116.35C-.2,7.92,7.55.94,13.32.25A4.45,4.45,0,0,0,15.17,0h119c6.57.66,11,4.34,13.89,10a14.15,14.15,0,0,1,1.28,5.14v42c-.23.29-.44.6-.69.87a2.91,2.91,0,0,1-5.11-1.57,11.82,11.82,0,0,1,0-1.46q0-18.3,0-36.61a12.07,12.07,0,0,0-4.7-10.15,12.71,12.71,0,0,0-8.05-2.43H18.49a12.47,12.47,0,0,0-8,2.5,12.05,12.05,0,0,0-4.63,10q0,14.65,0,29.32v83.13c0,5.13,2,9.1,6.7,11.5a12.34,12.34,0,0,0,5.63,1.21q56.52,0,113,0c5.92,0,10.31-3.3,11.88-8.82a14.77,14.77,0,0,0,.47-4V85.36a3,3,0,0,1,2.17-3.21c1.31-.38,2.44.16,3.39,1.59A3.82,3.82,0,0,0,149.37,84.06Z" />
-                          <path class="cls-1"
-                            d="M149.37,69.76v1.75c-1.27,1.93-2.54,2.53-4,1.85a2.9,2.9,0,0,1,.37-5.49A2.7,2.7,0,0,1,148.78,69C149,69.22,149.18,69.5,149.37,69.76Z" />
-                          <path class="cls-1"
-                            d="M111.69,110c.34.41.31.6-.09.91-1.59,1.21-3.17,2.42-4.71,3.68-.62.51-.9.19-1.27-.26a33.12,33.12,0,0,0-7.86-7.08A34.25,34.25,0,0,0,75,101.8c-.74.08-.74.39-.64.92,1.56,9.09-5.37,19.33-15.92,20.7A18.78,18.78,0,0,1,37.19,107a14.27,14.27,0,0,1,0-1.85c-.14-3.6,1.27-6.73,3-9.7C44.3,88.68,49.67,83,55.38,77.58c.47-.45.69-.25,1,.08A88,88,0,0,1,70.23,93.57a2.12,2.12,0,0,0,2.46,1.11,39.09,39.09,0,0,1,17.47,1.09A41.93,41.93,0,0,1,111.69,110Zm-54.2,6c6.77-.89,12.34-9,8.21-15.84a79.88,79.88,0,0,0-9.83-12.69,65.71,65.71,0,0,0-9.35,11.87,11.09,11.09,0,0,0-2,5.68A11.39,11.39,0,0,0,57.49,116.07Z" />
-                          <path class="cls-1"
-                            d="M101.54,55.07A7.41,7.41,0,1,1,94.06,62,7.42,7.42,0,0,1,101.54,55.07Z" />
-                          <path class="cls-1" d="M63.2,62.28a7.36,7.36,0,1,1-7.33-7.21A7.4,7.4,0,0,1,63.2,62.28Z" />
-                        </svg>
-                        <div class="text-left">
-                          <span>Oh! <br></span>
-                          <span>Rất Tiếc</span>
-                        </div>
-
-                      </div>
-                      <!-- <span>Rất Tiếc</span> -->
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="text-center mt-20 element-hide-rap">
-                <div>
-                  <span class="font-18">Số người tham dự</span>
-                  <select class="form-control" id="thamdusonguoi" name="thamdusonguoi">
-                    <option value="1">
-                      1 người
-                    </option>
-                    <option value="2">
-                      2 người
-                    </option>
-                    <option value="3">
-                      3 người
-                    </option>
-                    <option value="4">
-                      4 người
-                    </option>
-                    <option value="5">
-                      5 người
-                    </option>
-                  </select>
-                </div>
-              </div>
-
-
-
-              <div class="text-center box-pt-info element-hide-rap mt-20  hide-pt  fix-info">
-                <div>
-                  <span class="font-18">Số điện thoại</span>
-                  <input type="text" name="input_ptxe2" class="form-control input_ptxe2">
-                </div>
-              </div>
-
-
-
-              <div class="box-pt-info element-hide-rap mt-20  hide-pt ">
-                <div class="font-14">
-                  <div>
-                    <span>Để thuận tiện cho việc sắp xếp, đưa đón khách đi tiệc cưới, bạn vui lòng cung cấp số điện
-                      thoại
-                      giúp vợ chồng mình nhé!</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="box-pt-info element-hide-rap mt-20  hide-pt ">
-                <div class="font-14">
-                  <div>
-                    <span><strong class="color-red">Thông tin chuyến đi</strong> </span> <br>
-                    <span><strong>Thời gian xuất phát:</strong> </span> <br>
-                    <span><strong>Địa chỉ:</strong> </span> <br>
-                    <span><strong>Người liên hệ:</strong> - </span>
-                  </div>
-                </div>
-              </div>
-
-
-
-              <!-- End update  -->
-
-
-
-              <div class="btn-reciver-rsvp mt-40">
-                <button id="guiphanhoi">Gửi Phản Hồi</button>
-              </div>
-            </div>
-          </div>
-
-
 
           <hr>
 
@@ -3584,24 +3429,24 @@
           <hr>
 
 
-          <div class="mt-80 location1" id="location1">
+          <div class="mt-80 location" id="location1" style="display: flex; justify-content: center; height: 280px">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3842.40009244777!2d108.364972!3d15.623668999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTXCsDM3JzI1LjIiTiAxMDjCsDIxJzUzLjkiRQ!5e0!3m2!1svi!2s!4v1717492873675!5m2!1svi!2s"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              width="90%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <div class="mt-80 location2" id="location2">
+          <div class="mt-80 location" id="location2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d480.10483388739783!2d108.390781!3d15.7067116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169e1119a532c43%3A0x110bbe98cadc24b0!2zVHJ1bmcgVMOibSBUaeG7h2MgQ8aw4bubaSBOZ3V5w6puIEjGsMahbmc!5e0!3m2!1svi!2s!4v1717492905001!5m2!1svi!2s"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              width="90%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <div class="mt-80 location3" id="location3">
+          <div class="mt-80 location" id="location3">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5304408266084!2d106.7208969!3d10.847201099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175287431b9c799%3A0x4fd4d08d566e5a72!2zVHJ1bmcgdMOibSBI4buZaSBuZ2jhu4sgLSBUaeG7h2MgY8aw4bubaSBDbGFyaXMgUGFsYWNl!5e0!3m2!1svi!2s!4v1717492745647!5m2!1svi!2s"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              width="90%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
@@ -3612,8 +3457,8 @@
             <h3 class="text-center">Thông tin liên hệ</h3>
           </div>
           <div class="mt-40">
-            <div>
-              <img src="https://app.thesimple.vn/uploads/contact/64b21df710c45-footer  (2).jpg" alt="">
+            <div style="display: flex; justify-content: center; margin-bottom: 40px;">
+              <img src="./publics/heart.svg" style="width: 200px; height: 170px;" alt="">
             </div>
 
 
@@ -3623,21 +3468,21 @@
 
 
             <div class="col-xs-6">
-              <a href="tel:0902595993"><img src="https://app.thesimple.vn/uploads/contact/64b21df710e42-footer  (3).jpg"
+              <a href="https://www.facebook.com/thanhhao11" target="_blank"><img src="./publics/contact-1.svg"
                   alt=""></a>
             </div>
 
             <div class="col-xs-6">
-              <a href="tel:0903696946"><img src="https://app.thesimple.vn/uploads/contact/64b21df710cbe-footer  (4).jpg"
-                  alt=""></a>
+              <a href="https://www.facebook.com/profile.php?id=100003675807195" target="_blank"><img
+                  src="./publics/contact-2.svg" alt=""></a>
             </div>
 
 
             <div class="clearfix"></div>
           </div>
 
-          <div class="mt-80">
-            <a href="https://www.facebook.com/thanhhao11" target="_blank">
+          <div style="margin-top: 20px;">
+            <a href="https://www.facebook.com/profile.php?id=100003675807195" target="_blank">
               <img src="https://app.thesimple.vn/uploads/contact/64b21df710a46-footer  (1).jpg" alt="">
             </a>
           </div>
@@ -3649,10 +3494,12 @@
           <source
             src="https://app.thesimple.vn/uploads/music/63db7a3a006e2-reality_lost_frequencies_fingerstyle_guitar_cover_by_albert_gyorfi_tabs_-754655374604073076.mp3">
         </audio>
-        <div class="module gf_module- gf_module--lg gf_module--md gf_module--sm gf_module--xs ">
+        <div class="module gf_module- gf_module--lg gf_module--md gf_module--sm gf_module--xs">
           <div class="gla_music_icon btn-play-audio">
             <button class="btn-musicf">
-              <i class="fa fa-music after-slash"></i>
+              <p class="fa" style="width: 24px; height: 24px; margin: 0px;">
+                <img src="./publics/volume-up.png" style="width: 20px; height: 20px; margin-top: -5px;" />
+              </p>
             </button>
           </div>
         </div>
@@ -3681,7 +3528,7 @@
   <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/responsiveslides.min.js?ver=1717408883"></script>
   <script
     src="https://app.thesimple.vn/tem_front/assets/js-youtube/js/jQuery.YouTube.HD.Thumbnail.js?ver=1717408883"></script>
-  
+
   <script src="https://app.thesimple.vn/js/cropper.js?ver=1717408883"></script>
 
   <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/script.js?ver=1717408883"></script>
@@ -3702,7 +3549,7 @@
     var urlParams = new URLSearchParams(window.location.search);
     var type = urlParams.get('t');
     var inviteName = urlParams.get('n');
-    if(inviteName) {
+    if (inviteName) {
       $("#invite-name").html(inviteName);
     }
 
