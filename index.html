@@ -144,6 +144,11 @@
       .fa-chevron-circle-right:before {
         content: "\f138";
       }
+
+      .volumne {
+        right: 10px !important;
+        bottom: 10px !important;
+      }
     }
 
     .slideshow-container {
@@ -184,6 +189,31 @@
       transition: 0.6s ease;
       border-radius: 0 3px 3px 0;
       user-select: none;
+      text-shadow: 1px 1px #231f20;
+    }
+
+    .prev-1,
+    .next-1 {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      text-shadow: 1px 1px #231f20;
+    }
+
+    .prev:hover,
+    .prev-1:hover,
+    .next:hover,
+    .next-1:hover {
+      text-decoration: none;
     }
 
     /* Position the "next button" to the right */
@@ -192,10 +222,9 @@
       border-radius: 3px 0 0 3px;
     }
 
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover,
-    .next:hover {
-      background-color: #bbb6b6;
+    .next-1 {
+      right: 0;
+      border-radius: 3px 0 0 3px;
     }
 
     .active,
@@ -3422,7 +3451,7 @@
 
 
           <div style="margin-top: 40px; margin-bottom: 20px;">
-            <img id="image-1" src="./publics/quotes.png">
+            <img src="./publics/quotes.png">
           </div>
 
           <div style="margin-top: 40px; margin-bottom: 20px;">
@@ -3465,8 +3494,8 @@
                 <div class="mySlides-1 fades">
                   <img src="./publics/gallery-10.webp" alt="">
                 </div>
-                <a class="prev" onclick="plusSlides1(-1)">❮</a>
-                <a class="next" onclick="plusSlides1(1)">❯</a>
+                <a class="prev-1" onclick="plusSlides1(-1)">❮</a>
+                <a class="next-1" onclick="plusSlides1(1)">❯</a>
               </div>
             </div>
 
@@ -3577,14 +3606,14 @@
 
 
 
-            <div class="col-xs-6">
-              <a href="https://www.facebook.com/thanhhao11" target="_blank"><img src="./publics/contact-1.svg"
-                  alt=""></a>
+            <div class="col-xs-6" style="display: flex; justify-content: center;">
+              <a href="https://www.facebook.com/thanhhao11" target="_blank"><img style="width: 130px; height: 70px;"
+                  src="./publics/contact-1.svg" alt=""></a>
             </div>
 
-            <div class="col-xs-6">
+            <div class="col-xs-6" style="display: flex; justify-content: center;">
               <a href="https://www.facebook.com/profile.php?id=100003675807195" target="_blank"><img
-                  src="./publics/contact-2.svg" alt=""></a>
+                  style="width: 130px; height: 70px;" src="./publics/contact-2.svg" alt=""></a>
             </div>
 
 
@@ -3600,23 +3629,36 @@
         </div>
 
 
-        <audio id="audio">
+        <audio id="player" autoplay loop>
           <source src="./publics/audio.mp3">
         </audio>
-        <div class="module gf_module- gf_module--lg gf_module--md gf_module--sm gf_module--xs">
-          <div class="gla_music_icon btn-play-audio">
-            <button class="btn-musicf">
-              <p class="fa" style="width: 24px; height: 24px; margin: 0px;">
-                <img src="./publics/volume-up.png" style="width: 20px; height: 20px; margin-top: -5px;" />
-              </p>
-            </button>
+        <div
+          class="volumne"
+          style="position: absolute; right: 30px; bottom: 20px; background-color: #9a9696; width: 40px; height: 40px; border-radius: 20px; display: flex; justify-content: center; align-items: center;">
+          <div style="margin-top: 10px;">
+            <span id="playerVolumeOff"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="#fff"
+                class="bi bi-volume-mute-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z">
+                </path>
+              </svg>
+            </span>
+            <span id="playerVolumeOn" style="display: none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" fill="#fff" class="bi bi-volume-up-fill"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z">
+                </path>
+                <path
+                  d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z">
+                </path>
+                <path
+                  d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z">
+                </path>
+              </svg>
+            </span>
           </div>
         </div>
-
-
-
-
-
         <div class="rsvp-data" data-link=""></div>
         <div class="countdown-time" data-time="August 13, 2023 11:30" data-id="610"></div>
         <!-- /app/publics/thiep-cuoi-1/css -->
@@ -3783,5 +3825,23 @@
       slides[slideIndex1 - 1].style.display = "block";
       setTimeout(showSlides, 10000);
     }
+
+    window.document.getElementById('playerVolumeOff').addEventListener('click', function () {
+      const playerVolumeOn = document.getElementById("playerVolumeOn");
+      playerVolumeOn.style.display = "block";
+      const playerVolumeOff = document.getElementById("playerVolumeOff");
+      playerVolumeOff.style.display = "none";
+      var audio = document.getElementById('player');
+      audio.play();
+    });
+    window.document.getElementById('playerVolumeOn').addEventListener('click', function () {
+      const playerVolumeOff = document.getElementById("playerVolumeOff");
+      playerVolumeOff.style.display = "block";
+      const playerVolumeOn = document.getElementById("playerVolumeOn");
+      playerVolumeOn.style.display = "none";
+      var audio = document.getElementById('player');
+      audio.pause();
+    });
+
 
   </script>
