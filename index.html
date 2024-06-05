@@ -27,11 +27,11 @@
   <!-- Stylesheets -->
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro"> -->
   <link href="https://app.thesimple.vn/tem_front/assets/teamplates/css/bootstrap.css?ver=1717408883" rel="stylesheet">
-  <link href="https://app.thesimple.vn/tem_front/assets/teamplates/css/style.css?ver=1717408883" rel="stylesheet">
+  <!-- <link href="https://app.thesimple.vn/tem_front/assets/teamplates/css/style.css?ver=1717408883" rel="stylesheet"> -->
   <!--Favicon-->
   <!-- Responsive -->
-  <link rel="stylesheet" type="text/css"
-    href="https://app.thesimple.vn/tem_front/assets/teamplates/fonts/font-awesome-4.2.0/css/font-awesome.css?ver=1717408883" />
+  <!-- <link rel="stylesheet" type="text/css"
+    href="https://app.thesimple.vn/tem_front/assets/teamplates/fonts/font-awesome-4.2.0/css/font-awesome.css?ver=1717408883" /> -->
   <!-- <link rel="stylesheet"
     href="https://app.thesimple.vn/tem_front/assets/teamplates/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css?ver=1717408883">
   <link rel="stylesheet"
@@ -43,7 +43,7 @@
     rel="stylesheet"> -->
   <!-- <link href="https://app.thesimple.vn/css/cropper.css?ver=1717408883" rel="stylesheet"> -->
 
-  <link href="https://app.thesimple.vn/css/slick.css?ver=1717408883" rel="stylesheet">
+  <!-- <link href="https://app.thesimple.vn/css/slick.css?ver=1717408883" rel="stylesheet"> -->
   <!-- <link href="https://app.thesimple.vn/css/addtocalendar.css?ver=1717408883" rel="stylesheet"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,8 +101,6 @@
       animation: mymove1 3s infinite;
     }
 
-    .fa-music:before {}
-
     @media only screen and (max-width: 767px) {
       .block-1 {
         display: none;
@@ -133,9 +131,11 @@
       .box-ab-theme-2 {
         margin-top: 80px !important;
       }
+
       .btn-musicf {
         padding: 0px !important;
       }
+
       .after-slash:after {
         top: 28.2% !important;
         left: 50% !important;
@@ -144,6 +144,63 @@
       .fa-chevron-circle-right:before {
         content: "\f138";
       }
+    }
+
+    .slideshow-container {
+      position: relative;
+      height: 100%;
+    }
+
+    .slideshow-container-1 {
+      position: relative;
+      width: 410px;
+      height: 616spx;
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    .mySlides-1 {
+      display: none
+    }
+
+    .fades {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: #bbb6b6;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
     }
 
     /* Chrome, Safari, Opera */
@@ -170,10 +227,18 @@
         opacity: 1;
       }
     }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
   </style>
 
-  <link rel="stylesheet" type="text/css"
-    href="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/css/sweetalert.css?ver=1717408883">
   <link rel="stylesheet" type="text/css"
     href="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/css/style.css?ver=1717408883">
 </head>
@@ -181,33 +246,35 @@
 <body>
   <div style="display: flex; height: 100vh; overflow: hidden;">
     <div style="position:relative; width: 70%; height: 100vh;" class="block-1">
-      <div class="slide-box" style="width: 100%; height: 100%; margin-top: 0px;">
+      <div style="width: 100%; height: 100%; margin-top: 0px;">
 
-        <div class="autoplay">
-          <div>
+        <div class="slideshow-container">
+          <div class="mySlides fades">
             <img src="./publics/cover-1.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
-          <div>
+          <div class="mySlides fades">
             <img src="./publics/cover-2.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
-          <div>
+          <div class="mySlides fades">
             <img src="./publics/cover-3.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
-          <div>
+          <div class="mySlides fades">
             <img src="./publics/cover-4.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
-          <div>
+          <div class="mySlides fades">
             <img src="./publics/cover-5.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
-          <div>
+          <div class="mySlides fades">
             <img src="./publics/cover-6.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
-          <div>
+          <div class="mySlides fades">
             <img src="./publics/cover-7.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
-          <div>
+          <div class="mySlides fades">
             <img src="./publics/cover-8.webp" style="width: 100%; height: 100vh; object-fit: cover;" alt="cover" />
           </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
       </div>
       <div style="position: absolute; bottom: 40px; left: 80px; z-index: 100;">
@@ -3331,8 +3398,9 @@
                   </div>
 
                   <div class="tx-bt mt-30">
-                    Là một người ít nói, sống nội tâm, hiền  lành, luôn luôn lắng nghe và thấu hiểu với những người xung quanh.
-                    Có sở thích  đặc biệt với nấu ăn và làm nội trợ, là mẫu hình  chuẩn mực "người phụ nữ của  gia đình".
+                    Là một người ít nói, sống nội tâm, hiền lành, luôn luôn lắng nghe và thấu hiểu với những người xung
+                    quanh.
+                    Có sở thích đặc biệt với nấu ăn và làm nội trợ, là mẫu hình chuẩn mực "người phụ nữ của gia đình".
                   </div>
 
                 </div>
@@ -3365,42 +3433,41 @@
 
           <div class="mt-80 px-10">
             <h3 class="text-center">Photo Gallery</h3>
-
-            <div class="slide-box">
-
-              <div class="autoplay">
-                <div>
+            <div style="display: flex; justify-content: center;">
+              <div class="slideshow-container-1">
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-1.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-2.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-3.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-4.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-5.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-6.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-7.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-8.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-9.webp" alt="">
                 </div>
-                <div>
+                <div class="mySlides-1 fades">
                   <img src="./publics/gallery-10.webp" alt="">
                 </div>
+                <a class="prev" onclick="plusSlides1(-1)">❮</a>
+                <a class="next" onclick="plusSlides1(1)">❯</a>
               </div>
-
             </div>
 
           </div>
@@ -3534,8 +3601,7 @@
 
 
         <audio id="audio">
-          <source
-            src="./publics/audio.mp3">
+          <source src="./publics/audio.mp3">
         </audio>
         <div class="module gf_module- gf_module--lg gf_module--md gf_module--sm gf_module--xs">
           <div class="gla_music_icon btn-play-audio">
@@ -3563,31 +3629,7 @@
     </div>
   </div>
   <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/jquery.js?ver=1717408883"></script>
-  <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/bootstrap.min.js?ver=1717408883"></script>
-  <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/wow.js?ver=1717408883"></script>
   <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/jquery-ui.min.js?ver=1717408883"></script>
-  <script
-    src="https://app.thesimple.vn/tem_front/assets/teamplates/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js?ver=1717408883"></script>
-  <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/responsiveslides.min.js?ver=1717408883"></script>
-  <script
-    src="https://app.thesimple.vn/tem_front/assets/js-youtube/js/jQuery.YouTube.HD.Thumbnail.js?ver=1717408883"></script>
-
-  <script src="https://app.thesimple.vn/js/cropper.js?ver=1717408883"></script>
-
-  <script src="https://app.thesimple.vn/tem_front/assets/teamplates/js/script.js?ver=1717408883"></script>
-
-
-
-
-  <script src="https://app.thesimple.vn/js/slick.min.js?ver=1717408883"></script>
-  <script src="https://app.thesimple.vn/js/addtocalendar.min.js?ver=1717408883"></script>
-  <script type="text/javascript" src="template-thiep/thiep-cuoi-1/js/style.js"></script>
-  <script type="text/javascript"
-    src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/js/sweetalert.min.js?ver=1717408883"></script>
-  <script type="text/javascript"
-    src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/js/stylersvp.js?ver=1717408883"></script>
-  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-  <script src="https://app.thesimple.vn/HTML/js/jstz.min.js?ver=1717408883"></script>
   <script type="text/javascript">
     var urlParams = new URLSearchParams(window.location.search);
     var type = urlParams.get('t');
@@ -3691,10 +3733,55 @@
       }
     }, 1000);
 
-    document.getElementById("guiphanhoi").addEventListener("click", function (event) {
-      event.preventDefault();
-      var x = document.getElementById("thamdusonguoi").value;
-      console.log(x);
-    });
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 15000);
+    }
+
+    let slideIndex1 = 1;
+    showSlides1(slideIndex1);
+
+    function plusSlides1(n) {
+      showSlides1(slideIndex1 += n);
+    }
+
+    function currentSlide1(n) {
+      showSlides1(slideIndex1 = n);
+    }
+
+    function showSlides1(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides-1");
+      if (n > slides.length) { slideIndex1 = 1 }
+      if (n < 1) { slideIndex1 = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex1++;
+      if (slideIndex1 > slides.length) { slideIndex1 = 1 }
+      slides[slideIndex1 - 1].style.display = "block";
+      setTimeout(showSlides, 10000);
+    }
 
   </script>
