@@ -3790,6 +3790,7 @@
     }
 
     function showSlides(n) {
+      console.log("n",n)
       let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
@@ -3801,7 +3802,9 @@
       slides[slideIndex - 1].style.display = "block";
     }
 
-    setTimeout(showSlides(slideIndex += 1), 15000);
+    setInterval(()=>{
+      showSlides(slideIndex += 1)
+    }, 10000);
 
 
     let slideIndex1 = 1;
@@ -3826,7 +3829,9 @@
       slides[slideIndex1 - 1].style.display = "block";
     }
 
-    setTimeout(showSlides(slideIndex1 += n), 10000);
+    setInterval(()=>{
+      showSlides1(slideIndex1 += 1)
+    }, 10000);
 
     window.document.getElementById('playerVolumeOff').addEventListener('click', function () {
       const playerVolumeOn = document.getElementById("playerVolumeOn");
